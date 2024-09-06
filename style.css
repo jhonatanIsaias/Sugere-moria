@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+*{
+    scroll-behavior: smooth;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+header {
+    display: flex;
+    justify-content:
+        space-between;
+    align-items:
+        center;
+    padding: 0px 20px;
+    background-color: #01013F;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    
+
+
+}
+
+@media(max-width:700px){
+
+    header>div>h1{
+        font-size: 20px;
+    }
+
+}
+
+
+
+header>.imgetext>img {
+    width: 100px;
+}
+
+nav {
+    color: #ffffff;
+    text-align: center;
+    width: auto;
+}
+
+@media (max-width: 900px) {
+    nav {
+      display: none;
+    }
+  }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    color: #ffffff;
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+
+    color: #ffffff;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.imgetext {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+.cover {
+    background-image: url("./assets/images/download.jpeg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    height: 81vh;
+}
+
+.text-information{
+    background-color: rgba(0, 0, 0, 0.597);
+    box-shadow: 6px 1px 10px 0px #ffffff50;
+    width: 50%;
+    height: 250px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+@media(max-width:900px){
+    .text-information{
+        width: 95%;
+    }
+}
+
+#corpo-docente{
+    padding: 5rem 0px 10rem 0px;
+}
+
+.profile-teacher{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-teacher>img{
+
+    width: 350px;
+
+}
+
+@media(max-width: 380px){
+    .profile-teacher>img{
+        width: 90%;
+    }
+}
+
+.conteudo-aula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+@media(max-width:900px){
+    .conteudo-aula{
+        flex-direction: column;
+    }
+}
+
+.aticle-imagem-aula{
+
+    width: 35%;
+
+}
+
+@media(max-width:900px){
+    .aticle-imagem-aula{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+}
+
+
+
+.article-texto-aula{
+
+    
+    width: 50%;
+
+}
+
+@media(max-width:900px){
+    .article-texto-aula{
+    
+        gap: 30px;
+        width: 100%;
+    }
+}
+
+.aticle-imagem-aula>img{
+    width: 320px;
+    border-radius: 8px 150px 8px 8px;
+}
+
+@media(max-width:380px){
+    .aticle-imagem-aula>img{
+        width: 100%;
+    }
+}
+
+#aulas{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #01013F;
+    color: #fff;
+}
+
+ol{
+    list-style: none;
+
+}
+
+ol>li{
+    text-align: initial;
+}
+
+ol>li>p{
+    background-color: #F5F1F1;
+    color: #000;
+    padding: 5px;
+    width: 25px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 33px 46px 9px -23px rgba(0,0,0,0.1);
+    margin: 15px;
+}
+
+aside{
+    background-color: #AD920B;
+    padding: 2rem;
+}
+
+footer{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+footer>.copy{
+    display: flex;
+    gap: 15px;
+}
