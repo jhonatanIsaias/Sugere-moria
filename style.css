@@ -24,14 +24,19 @@
 	align-items: center;
 	flex-direction: column;
 	gap: 2rem;
+    overflow: hidden;
 }
-
+#titleLGPD{
+    text-align: center;
+    margin: 20px;
+}
 .area_container {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
     justify-content: space-between;
 	gap: 1rem;
+    width: 100%;
 }
 
 .profiles_container {
@@ -52,11 +57,6 @@
 	border: solid 1px #dbdee3;
 	border-radius: 16px;
 	text-align: center;
-}
-.profile_image{
-    width: 80px;
-    height: 100px;
-    margin-bottom: 40px;
 }
 #pinturas{
     background-color: #FD9800;
@@ -80,14 +80,9 @@ header {
         space-between;
     align-items:
         center;
-    padding: 0px 20px;
     background-color: #F4b151;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    
-
-
 }
 
 @media(max-width:700px){
@@ -101,9 +96,9 @@ header {
 
 
 header>.imgetext>img {
-    width: 100px;
+    width: 200px;
+    height: 50px;
 }
-
 nav {
     color: #ffffff;
     text-align: center;
@@ -154,14 +149,43 @@ section {
 }
 
 .cover {
-    background-image: url("./assets/images/picasso.jpeg");
-    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 600px; /* Altura ajustável */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-attachment: fixed;
-    height: 81vh;
+    overflow: hidden;
 }
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    display: flex;
+    animation: slide 20s infinite;
+    z-index: 0; /* Mantém o carrossel atrás da text-information */
+  }
+  .carousel-image {
+   flex: 0 0 20%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .caption {
+    position: absolute;
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente para legibilidade */
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    width: calc(100% - 20px); /* Ajusta a largura para ter alguma margem nas laterais */
+  }
 
 .text-information{
     background-color: rgba(0, 0, 0, 0.597);
@@ -173,10 +197,21 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 .text-information p {
     font-size: 24px;
 }
+/* Animação simples para fazer o carrossel deslizar */
+@keyframes slide {
+    0% { transform: translateX(0); }
+  20% { transform: translateX(-20%); }
+  40% { transform: translateX(-40%); }
+  60% { transform: translateX(-60%); }
+  80% { transform: translateX(-80%); }
+  100% { transform: translateX(0); }
+  }
 
 @media(max-width:900px){
     .text-information{
